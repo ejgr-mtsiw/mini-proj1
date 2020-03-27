@@ -1,5 +1,5 @@
 # mini-proj1
-##[PWA] Tarefa 2.2: Mini-Projeto: Single Page Application (SPA)
+## [PWA] Tarefa 2.2: Mini-Projeto: Single Page Application (SPA)
 
 A tarefa 2.2 corresponde ao primeiro desenvolvimento web da unidade curricular.
 Esta programação pretende verificar os conhecimentos anteriores relativos à
