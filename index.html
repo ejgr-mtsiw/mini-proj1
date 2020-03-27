@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt" data-ng-app="miniProj1App">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem sou eu?</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="ui container">
+        <!-- menu -->
+        <div class="ui three item stackable tabs menu">
+            <a href="#!" class="item"">Quem sou eu?</a>
+            <a href="#!work" class="item"">O que faço?</a>
+            <a href="#!hobbies" class="item"">Hobbies</a>
+        </div>
+
+        <!-- view -->
+        <div data-ng-view></div>
+
+        <!-- rodapé -->
+        <div class="ui center aligned segment">
+            <a href="https://www.facebook.com/"><i class="large grey facebook f icon"></i></a>
+            <a href="https://www.linkedin.com/"><i class="large grey linkedin in icon"></i></a>
+            <a href="https://github.com/ejgr-mtsiw/mini-proj1/"><i class="large grey github icon"></i></a>
+            <a href="https://www.twitter.com"><i class="large grey twitter icon"></i></a>
+            <a href="https://www.instagram.com"><i class="large grey instagram icon"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
