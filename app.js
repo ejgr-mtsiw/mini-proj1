@@ -5,33 +5,29 @@ app.config(function ($routeProvider) {
 
         .when('/', {
             templateUrl: 'pages/whoami.html',
-            controller: 'WhoAmIController',
-            activetab: 'home'
+            activetab: 'whoami',
+            title: 'Quem sou eu?'
         })
 
         .when('/work', {
             templateUrl: 'pages/work.html',
-            controller: 'WorkController',
-            activetab: 'work'
+            activetab: 'work',
+            title: 'O que faço?'
         })
 
         .when('/hobbies', {
             templateUrl: 'pages/hobbies.html',
-            controller: 'HobbiesController',
-            activetab: 'hobbies'
+            activetab: 'hobbies',
+            title: 'Hobbies'
         })
 
         .otherwise({ redirectTo: '/' });
 });
 
-app.controller('WhoAmIController', function ($scope) {
-    $scope.message = 'Hello from WhoAmIController';
-});
-
-app.controller('WorkController', function ($scope) {
-    $scope.message = 'Hello from WorkController';
-});
-
-app.controller('HobbiesController', function ($scope) {
-    $scope.message = 'Hello from HobbiesController';
-});
+// Update page title and current active tab
+app.run(['$rootScope', function ($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+        $rootScope.activetab = current.$$route.activetab;
+    });
+}]);
